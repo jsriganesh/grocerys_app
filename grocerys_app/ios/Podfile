@@ -12,6 +12,12 @@ target 'grocerys_app' do
     :hermes_enabled => false
   )
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
+
+  pod 'lottie-react-native', :path => '../node_modules/lottie-react-native'
+
   target 'grocerys_appTests' do
     inherit! :complete
     # Pods for testing
