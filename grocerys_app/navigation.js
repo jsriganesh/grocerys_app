@@ -3,13 +3,15 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity,StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import {createStackNavigator } from '@react-navigation/stack';
-import {Constants} from "./src/utils/constants"
+import ScreenNames from "./src/utils/constants"
 import Dashboard from "./src/pages/dashboard"
+import OrderDetails from "./src/pages/orderDetails"
+import OrderList from "./src/pages/orderList"
+import CheckoutDetails from "./src/pages/checkoutDetails"
 import BottomNavigation from "./src/components/BottomNavigation"
 import SearchProducts from "./src/pages/searchProducts"
 import SearchButton from "./src/components/searchButton"
 import colors from './src/utils/colors';
-
 
 
 // create a component
@@ -29,10 +31,15 @@ const AppNavigator=() =>{
 
          
           
-          <AppStackNavigator.Screen name={"BottomNavigation"} component={BottomNavigation} />
-          <AppStackNavigator.Screen name={"SearchProducts"} component={SearchProducts} />
-          <AppStackNavigator.Screen name={"SearchButton"} component={SearchButton} />
-          <AppStackNavigator.Screen name={Constants.DashBoardPage} component={Dashboard} />
+          <AppStackNavigator.Screen name={ScreenNames.BottomNavigation} component={BottomNavigation} />
+          <AppStackNavigator.Screen name={ScreenNames.SearchProducts} component={SearchProducts} />
+          {/* <AppStackNavigator.Screen name={ScreenNames.SearchButton} component={SearchButton} /> */}
+          <AppStackNavigator.Screen name={ScreenNames.DashBoardPage} component={Dashboard} />
+          <AppStackNavigator.Screen name={ScreenNames.CheckoutDetails} component={CheckoutDetails} />
+
+          <AppStackNavigator.Screen name={ScreenNames.OrderDetails} component={OrderDetails} />
+          <AppStackNavigator.Screen name={ScreenNames.OrderList} component={OrderList} />
+
 
 
         </AppStackNavigator.Navigator>

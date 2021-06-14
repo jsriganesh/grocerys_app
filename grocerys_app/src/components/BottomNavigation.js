@@ -10,11 +10,17 @@ import colors from '../utils/colors';
 import Categorys from "../pages/categorys"
 import Dashboard from "../pages/dashboard"
 import CartList from "../pages/cartList"
+import ProductDetails from "../pages/productDetails"
+import CheckoutDetails from "../pages/checkoutDetails"
+import Profile from "../pages/profile"
+import OrderList from "../pages/orderList"
+import OrderDetails from "../pages/orderDetails"
+
 
 const cartList = () => <CartList />;
 const categorys = () => <Categorys />;
 const dashboard = (props) => <Dashboard navigation={props.navigation} />;
-const profile = () => <Text>profile</Text>;
+const profile = () => <Profile/>;
 
 const Bottomnavigation = (props) => {
 

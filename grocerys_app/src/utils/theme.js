@@ -100,5 +100,73 @@ export default theme = StyleSheet.create({
   },
   checkoutButtonText:{
     fontSize:15,fontWeight:"bold",color:colors.white
+  },
+  productDetailsDescription:{
+        
+  },
+  productDescriptionScrollStyle:{
+    height:deviceHeight-600
+  },
+  addressDetails:{
+    fontSize:15
+  },
+  profileOptions:{
+    flexDirection:"row",justifyContent:"space-between",paddingHorizontal:10,paddingVertical:15,borderBottomWidth:0.7,borderBottomColor:"#888888"
+  },
+  orderId:{
+    fontSize:15,
+    fontWeight:"bold"
+  },
+  orderListMediumText:{
+    fontSize:15,
+  },
+  orderListRow:{
+    marginVertical:5,
+    flexDirection:"row",
+    justifyContent:"space-between",alignItems:"center"
+  },
+  orderListStatusRow:{
+    marginVertical:5,
+    flexDirection:"row",
+  },
+  detailsButton:{
+    paddingHorizontal:15,paddingVertical:7,borderRadius:20,borderWidth:0.5,borderColor:"#888888"
+  },
+  detailsLabelStyle:{
+    fontSize:15,color:"#888888"
+  },
+  orderListStatusText:{
+    textAlign:"right",
+    alignSelf:"center",
+    fontSize:17,
+    fontWeight:"bold",
+    color:colors.themeColor,
+  },
+  buttonTextStyle:{
+    fontWeight:"bold",fontSize:15,color:colors.white
+  },
+  buttonStyle:{
+    backgroundColor:colors.themeColor,paddingVertical:10,paddingHorizontal:35,borderRadius:5
+  },
+  paymentMethodButtonView:{
+    backgroundColor:"#F7F5F3",
+    borderRadius:7,borderWidth:1,borderColor:"#F1F0EE",
+    paddingVertical:5,paddingHorizontal:10,flexDirection:"row",justifyContent:"space-between"
+  },
+  paymentMethodButtonText:{ 
+    fontSize: 16, fontWeight: "bold", marginVertical: 10,color:colors.themeColor 
+  },
+  orderDetailsCardView:{
+    marginVertical:5,paddingHorizontal:10,borderRadius:5,paddingVertical:10,backgroundColor:colors.white
+  },
+
+  orderListProductImage: {
+    height: 90, width: 70, borderRadius: 5, flex: 0.3
+  },
+  orderDetailsNormalText:{
+    fontSize:15,
+    color:"#888888",
+    fontWeight:"bold"
   }
+
 })

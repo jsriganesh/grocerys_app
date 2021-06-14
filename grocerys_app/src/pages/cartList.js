@@ -5,8 +5,10 @@ import colors from '../utils/colors';
 import Labels from '../utils/labels';
 import CommonHeadr from "../components/commonHeader";
 import LottieView from 'lottie-react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import theme from "../utils/theme";
+import ScreenNames from '../utils/constants';
 // create a component
 
 const rupee = "₹"
@@ -22,7 +24,7 @@ const RenderProductList = () => {
                 <Image style={theme.cartImage} resizeMode={"cover"} source={require("../../assets/images/no_preview_image.png")} />
 
                 <View style={theme.cartDetails}>
-                    <Text style={theme.cartProductDetails} numberOfLines={1}>{Labels.sampleDescription}</Text>
+                    <Text style={theme.cartProductDetails} numberOfLines={1}>{Labels.productNameAndDetails}</Text>
 
                     <View style={theme.cartItemAmountView}>
                         <View style={{ flexDirection: "row" }}>
@@ -86,10 +88,12 @@ const EmptyCart=()=>{
 }
 
 const CheckOutButton=()=>{
+    const navigation = useNavigation();
+
     return(
         <View style={theme.checkOutButtonView}>
                 <Text style={theme.mediumText}>{"Total (4 Items): "+rupee+" 250"}</Text>
-                <TouchableOpacity style={theme.checkoutButton}>
+                <TouchableOpacity style={theme.checkoutButton} onPress={()=>{navigation.navigate(ScreenNames.CheckoutDetails)}}>
                     <Text style={theme.checkoutButtonText}>{Labels.CheckOut}</Text>
                 </TouchableOpacity>
         </View>

@@ -5,11 +5,15 @@ import SearchIcon from 'react-native-vector-icons/dist/FontAwesome';
 import colors from '../utils/colors';
 import theme from '../utils/theme';
 import labels from '../utils/labels';
+import { useNavigation } from '@react-navigation/native';
+
 
 // create a component
 const SearchButton = (props) => {
+    const navigation = useNavigation();
+
     return (
-        <TouchableOpacity onPress={()=>{props.navigation.navigate("SearchProducts")}} style={theme.searchButtonStyle}>
+        <TouchableOpacity onPress={()=>{navigation.navigate("SearchProducts")}} style={theme.searchButtonStyle}>
             <SearchIcon name="search"  size={18} color={colors.white}/>
             <Text style={theme.searchFontText}>{labels.ProductSearchText}</Text>
         </TouchableOpacity>
