@@ -102,10 +102,10 @@ export default theme = StyleSheet.create({
     fontSize:15,fontWeight:"bold",color:colors.white
   },
   productDetailsDescription:{
-        
+        height:deviceHeight-590
   },
   productDescriptionScrollStyle:{
-    height:deviceHeight-600
+    height:deviceHeight
   },
   addressDetails:{
     fontSize:15
@@ -167,6 +167,49 @@ export default theme = StyleSheet.create({
     fontSize:15,
     color:"#888888",
     fontWeight:"bold"
-  }
+  },
+  categoryImage:{
+    backgroundColor:colors.themeColor,
+    height:58,width:53
+  },
+  categoryName:{
+    fontSize:15,fontWeight:"bold",color:"#605F5F",
+  },
+  categorySmallcontainer: {
+    justifyContent: "center", alignItems: "center", borderRadius: 60,
+    width: 80,
+    height: 80,
+    shadowRadius: 4,
+    shadowOffset: {
+        width: 4,
+        height: -4,
+    },
+    shadowColor: "#000000",
+    elevation: 4,
+    
+    // backgroundColor: '#2c3e50',
+    backgroundColor: '#DFF0ED',
+},
+
+boxCategorycontainer: {
+  // justifyContent: "center", alignItems: "center", borderRadius: 5,
+  width: 100,
+  height: 160,
+  // shadowRadius: 4,
+  // shadowOffset: {
+  //     width: 4,
+  //     height: -4,
+  // },
+  // shadowColor: "#000000",
+  // elevation: 4,
+  
+  // backgroundColor: '#2c3e50',
+  backgroundColor: '#DFF0ED',
+},
+
+boxCategoryImage:{
+  backgroundColor:colors.white,
+    height:160,width:100
+}
 
 })

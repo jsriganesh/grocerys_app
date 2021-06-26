@@ -1,0 +1,74 @@
+[
+    {
+        "_id": "60c8408a295bf40424826c5e",
+        "category_image": "https://i.picsum.photos/id/242/536/354.jpg?hmac=eBmLX_mGK8UV50pe3GydmYjbGebCFjH6SiSTZUNd944",
+        "category_name": "Fruits",
+        "created_time_and_date": "Tue Jun 15 2021 11:24:18 GMT+0530 (India Standard Time)",
+        "category_description": "bananas, apples, grapes, oranges, strawberries, avocados, peaches, pineapple, pears, etc.",
+        "category_code": 1623736458487,
+        "__v": 0
+    },
+    {
+        "_id": "60c840a4295bf40424826c5f",
+        "category_image": "https://i.picsum.photos/id/242/536/354.jpg?hmac=eBmLX_mGK8UV50pe3GydmYjbGebCFjH6SiSTZUNd944",
+        "category_name": "Vegetables",
+        "created_time_and_date": "Tue Jun 15 2021 11:24:44 GMT+0530 (India Standard Time)",
+        "category_description": "potatoes, tomatoes, onions, carrots, lettuce, broccoli, peppers, celery, garlic, cucumbers, etc.",
+        "category_code": 1623736484268,
+        "__v": 0
+    },
+    {
+        "_id": "60c840bb295bf40424826c60",
+        "category_image": "https://i.picsum.photos/id/242/536/354.jpg?hmac=eBmLX_mGK8UV50pe3GydmYjbGebCFjH6SiSTZUNd944",
+        "category_name": "Canned Goods",
+        "created_time_and_date": "Tue Jun 15 2021 11:25:07 GMT+0530 (India Standard Time)",
+        "category_description": "olives, soup, tuna, veggies, fruit, etc.",
+        "category_code": 1623736507694,
+        "__v": 0
+    },
+    {
+        "_id": "60c840d9295bf40424826c61",
+        "category_image": "https://i.picsum.photos/id/242/536/354.jpg?hmac=eBmLX_mGK8UV50pe3GydmYjbGebCFjH6SiSTZUNd944",
+        "category_name": "Frozen Foods",
+        "created_time_and_date": "Tue Jun 15 2021 11:25:37 GMT+0530 (India Standard Time)",
+        "category_description": "fish, ice cream, pizza, potatoes, ready meals, etc.",
+        "category_code": 1623736537856,
+        "__v": 0
+    },
+    {
+        "_id": "60c840eb295bf40424826c62",
+        "category_image": "https://i.picsum.photos/id/242/536/354.jpg?hmac=eBmLX_mGK8UV50pe3GydmYjbGebCFjH6SiSTZUNd944",
+        "category_name": "Meat",
+        "created_time_and_date": "Tue Jun 15 2021 11:25:55 GMT+0530 (India Standard Time)",
+        "category_description": "chicken, beef, pork, sausage, etc.",
+        "category_code": 1623736555850,
+        "__v": 0
+    },
+    {
+        "_id": "60c840fd295bf40424826c63",
+        "category_image": "https://i.picsum.photos/id/242/536/354.jpg?hmac=eBmLX_mGK8UV50pe3GydmYjbGebCFjH6SiSTZUNd944",
+        "category_name": "Fish and shellfish",
+        "created_time_and_date": "Tue Jun 15 2021 11:26:13 GMT+0530 (India Standard Time)",
+        "category_description": "shrimp, crab, clams, tuna, salmon, tilapia, etc.",
+        "category_code": 1623736573884,
+        "__v": 0
+    },
+    {
+        "_id": "60c84117295bf40424826c64",
+        "category_image": "https://i.picsum.photos/id/242/536/354.jpg?hmac=eBmLX_mGK8UV50pe3GydmYjbGebCFjH6SiSTZUNd944",
+        "category_name": "Deli",
+        "created_time_and_date": "Tue Jun 15 2021 11:26:39 GMT+0530 (India Standard Time)",
+        "category_description": "chees, ham, turkey, salami, etc.",
+        "category_code": 1623736599523,
+        "__v": 0
+    },
+    {
+        "_id": "60c8412b295bf40424826c65",
+        "category_image": "https://i.picsum.photos/id/242/536/354.jpg?hmac=eBmLX_mGK8UV50pe3GydmYjbGebCFjH6SiSTZUNd944",
+        "category_name": "Snacks",
+        "created_time_and_date": "Tue Jun 15 2021 11:26:59 GMT+0530 (India Standard Time)",
+        "category_description": "chips, crackers, pretzels, popcorn, peanuts, nuts, candy, etc.",
+        "category_code": 1623736619454,
+        "__v": 0
+    }
+]

@@ -5,7 +5,8 @@ var ScreenNames={
      BottomNavigation:"BottomNavigation",
      CheckoutDetails:"CheckoutDetails",
      OrderDetails:"OrderDetails",
-     OrderList:"OrderList"
+     OrderList:"OrderList",
+     ProductDetails:"ProductDetails",
 }
 
 
