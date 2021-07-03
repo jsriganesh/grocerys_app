@@ -5,6 +5,7 @@ import colors from '../utils/colors';
 import Labels from '../utils/labels';
 import theme from "../utils/theme";
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
+import CommonHeadr from '../components/commonHeader';
 
 // create a component
 
@@ -63,6 +64,7 @@ const ProductList = () => {
 
     return (
         <View style={theme.renderProductList}>
+            
             <View style={[theme.cartItems, { alignItems: "center" }]}>
 
                 <Image style={theme.orderListProductImage} resizeMode={"cover"} source={require("../../assets/images/no_preview_image.png")} />
@@ -89,7 +91,8 @@ const ProductList = () => {
 const OrderDetails = () => {
     return (
         <View style={styles.container}>
-            <ScrollView>
+            <CommonHeadr  headerName={Labels.orderDetails}/>
+            <ScrollView style={{marginHorizontal:10}}>
                 <ProductDetails />
                 <ShippingInfo />
                 <ProductList />
@@ -107,7 +110,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: colors.appBackgroundColor,
-        marginHorizontal: 10,
+        // marginHorizontal: 10,
     },
 });
 

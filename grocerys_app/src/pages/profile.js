@@ -1,6 +1,6 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import colors from '../utils/colors';
 import theme from '../utils/theme';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
@@ -8,6 +8,25 @@ import ScreenNames from '../utils/constants';
 import { useNavigation } from '@react-navigation/native';
 
 // create a component
+
+const ProfileHeader = () => {
+    return (
+        <View style={theme.profileHeaderStyle}>
+            <Image source={require("../../assets/images/add_image.png")} style={{ height: 150, width: 150 }} />
+            <Text style={theme.profileUserName}>{"Sriganesh"}</Text>
+            <View style={{ flexDirection: "row", alignItems: "center" }}>
+                <Image source={require("../../assets/images/profileMail.png")} style={theme.profileIcons} />
+                <Text style={theme.profileEmail}>{"jsriganesh@gmail.com"}</Text>
+            </View>
+            <View style={{ flexDirection: "row", alignItems: "center" }}>
+                <Image source={require("../../assets/images/profilePhone.png")} style={theme.profileIcons} />
+                <Text style={theme.profileEmail}>{"8009004268"}</Text>
+            </View>
+
+        </View>
+    )
+}
+
 const Profile = () => {
     const navigation = useNavigation();
 
@@ -19,6 +38,8 @@ const Profile = () => {
     ]
     return (
         <View style={styles.container}>
+            <ProfileHeader />
+
             {
                 options.map((item, index) => {
                     return (
@@ -40,7 +61,7 @@ const styles = StyleSheet.create({
         flex: 1,
         // justifyContent: 'center',
         // alignItems: 'center',
-        marginHorizontal: 15,
+
         backgroundColor: colors.appBackgroundColor,
     },
 });

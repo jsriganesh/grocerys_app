@@ -53,6 +53,7 @@ export default theme = StyleSheet.create({
     height: 70, width: 60, borderRadius: 5, flex: 0.2
   },
   cartDetails: {
+    paddingHorizontal:8,
     flex: 0.8, justifyContent: "space-between", paddingVertical: 5
   },
   cartProductDetails: {
@@ -111,6 +112,7 @@ export default theme = StyleSheet.create({
     fontSize:15
   },
   profileOptions:{
+    marginHorizontal: 15,
     flexDirection:"row",justifyContent:"space-between",paddingHorizontal:10,paddingVertical:15,borderBottomWidth:0.7,borderBottomColor:"#888888"
   },
   orderId:{
@@ -210,6 +212,57 @@ boxCategorycontainer: {
 boxCategoryImage:{
   backgroundColor:colors.white,
     height:160,width:100
-}
+},
+cartItemDelete:{
+  flexDirection:"row",alignItems:"center"
+},
+searchContainer:{
+  flexDirection:"row",
+  alignItems:"center"
+},
+searchScreenCloseIcons:{
+  height:40,width:40,
+  // justifyContent:"center",alignItems:"center",alignContent:"center",alignSelf:"center"
+},
+
+headerStyle:{
+  alignItems:"center",
+  // justifyContent:"space-between",
+  flexDirection:"row",
+  height:50,
+  width:deviceWidth,
+  backgroundColor:colors.headerBackgroundColor
+},
+backArrowStyle:{
+  marginRight:10,
+  height:25,width:25,tintColor:colors.headerFontColor
+},
+headerNameStyle:{
+  fontSize:18,fontWeight:"bold",
+  // color:colors.headerFontColor
+  color:colors.black
+},
+headerBackNameStyle:{
+  fontSize:18,fontWeight:"bold",
+  color:colors.headerFontColor
+},
+productDetailsScreen:{
+  height:deviceWidth
+},
+profileHeaderStyle:{
+  alignItems:"center",
+  backgroundColor:colors.themeColor,
+  paddingVertical:15,
+  borderBottomRightRadius:40,borderBottomLeftRadius:40
+},
+profileUserName:{
+  color:colors.white,fontWeight:"bold",fontSize:20
+},
+profileEmail:{
+  marginVertical:8,
+  color:colors.white,fontWeight:"500",fontSize:16
+},
+
+profileIcons:{ height: 30, width: 30, marginRight: 10 }
 
 })

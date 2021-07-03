@@ -13,6 +13,7 @@ var Labels = {
     CheckOut:"Check Out",
     description:"Description",
     addToCard:"ADD TO CART",
+    removeCard:"REMOVE CART",
     deliveryAddress:"Delivery Address",
     sampleName:"Sri ganesh",
     sampleAddress:"2/179, Dhasampalayam. mettupalayam, coimbatore tamilnadu 641-305",
@@ -30,6 +31,10 @@ var Labels = {
     shippingInfo:"Shipping Info",
     quantity:"Quantity: ",
     sellingPrice:"Selling Price: ",
+    yourOrders:"Your Orders",
+    back:"Back",
+    orderDetails:"Order Details",
+    orderStatus:"Order Status",
 }
 
 export default Labels

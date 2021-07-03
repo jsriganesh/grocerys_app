@@ -15,6 +15,7 @@ import colors from './src/utils/colors';
 
 
 import ProductDetails from "./src/pages/productDetails"
+import OrderStatus from "./src/pages/orderStatus"
 
 // create a component
 
@@ -42,8 +43,10 @@ const AppNavigator=() =>{
           <AppStackNavigator.Screen name={ScreenNames.OrderDetails} component={OrderDetails} />
           <AppStackNavigator.Screen name={ScreenNames.OrderList} component={OrderList} />
           <AppStackNavigator.Screen name={ScreenNames.ProductDetails} component={ProductDetails} />
+          <AppStackNavigator.Screen name={ScreenNames.OrderStatus} component={OrderStatus} />
 
 
+          
 
         </AppStackNavigator.Navigator>
     );  

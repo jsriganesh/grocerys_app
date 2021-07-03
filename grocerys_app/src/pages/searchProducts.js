@@ -6,6 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import ScreenNames from "../utils/constants"
 
 import { Button, Card, Title, Paragraph } from 'react-native-paper';
+import theme from '../utils/theme';
 
 var mockItems = require("../../mock_data/items_mock_data.json")
 
@@ -47,6 +48,7 @@ const WithRibbon=({item, index})=>{
 // create a component
 const SearchProducts = (props) => {
     const [cardDetails, SetCardDetails] = useState(mockItems)
+    const navigation = useNavigation()
 
     const renderData = (item, index) => {
 
@@ -55,7 +57,7 @@ const SearchProducts = (props) => {
     return (
         <View style={styles.container}>
              
-            <View>
+            <View style={theme.searchContainer}>
                 <SearchBar
                     placeholder="Type Here..."
                     // round={true}
@@ -66,6 +68,9 @@ const SearchProducts = (props) => {
                 // this.filterAddressBook(search)}}
                 // value={this.state.search}
                 />
+                <TouchableOpacity onPress={()=>{navigation.goBack()}}>
+                   <Image source={require("../../assets/images/close.png")} style={theme.searchScreenCloseIcons}/>
+                </TouchableOpacity>
             </View>
 
             
@@ -99,7 +104,7 @@ const styles = StyleSheet.create({
         borderTopColor: "transparent",
         borderBottomColor: "transparent",
         backgroundColor: "transparent",
-        width: deviceWidth,
+        width: deviceWidth-50,
     },
     inputContainerStyle: { backgroundColor: colors.white},
     inputStyle: {

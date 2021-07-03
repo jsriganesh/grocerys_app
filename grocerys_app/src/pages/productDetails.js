@@ -6,8 +6,16 @@ import colors from '../utils/colors';
 import Labels from '../utils/labels';
 import theme from "../utils/theme";
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
+import { ActionTypes } from '../redux/action/actionList';
+import { connect } from "react-redux";
 
 const rupee = "₹"
+
+const mapStateToProps =(state) => ({
+    cartList:state.cartListReducer.cartList
+  
+  });
+
 // create a component
 const ProductDetails = (props) => {
     var item = {}
@@ -19,9 +27,11 @@ const ProductDetails = (props) => {
 
     const [itemDetails, updateDetails] = useState(item)
     const [itemImages, setImages] = useState([])
+    const [isAlreadyAvailable, setisAlreadyAvailable] = useState(false)
+    const [indexValue, setindexValue] = useState("")
 
 
-
+    
 
     useEffect(() => {
 
@@ -33,17 +43,20 @@ const ProductDetails = (props) => {
             setImages(image)
         }
 
-        console.log("props ---> " + JSON.stringify(props.route.params.itemDetails))
-
+        // console.log("props ---> " + JSON.stringify(props.route.params.itemDetails))
+        if(props.cartList.length > 0 ){
+            for (let i = 0; i < props.cartList.length; i++) {
+                if(props.cartList[i].item_code == itemDetails.item_code){
+                    setisAlreadyAvailable(true);
+                    setindexValue(i)
+                }
+            }
+        }else{
+            setisAlreadyAvailable(false)
+        }
 
     }, [])
 
-    // const images = [
-    //     "https://source.unsplash.com/1024x768/?nature",
-    //     "https://source.unsplash.com/1024x768/?water",
-    //     "https://source.unsplash.com/1024x768/?girl",
-    //     "https://source.unsplash.com/1024x768/?tree", // Network image
-    // ]
     return (
         <View>
             <View style={styles.container}>
@@ -90,8 +103,31 @@ const ProductDetails = (props) => {
 
             <View style={theme.checkOutButtonView}>
                 <Icon name="shopping-cart" size={30} />
-                <TouchableOpacity style={theme.checkoutButton}>
-                    <Text style={theme.checkoutButtonText}>{Labels.addToCard}</Text>
+                <TouchableOpacity style={theme.checkoutButton} onPress={()=>{
+                    if(isAlreadyAvailable){
+                        props.cartList.splice(indexValue,1)
+                    }else{
+                        props.cartList.push(itemDetails);
+                    }
+                    const {dispatch} = props
+                    dispatch({type:ActionTypes.CART_LIST,payload:props.cartList})
+                    if(props.cartList.length > 0 ){
+                        for (let i = 0; i < props.cartList.length; i++) {
+                            if(props.cartList[i].item_code == itemDetails.item_code){
+                                setisAlreadyAvailable(true);
+                                setindexValue(i)
+                            }
+                        }
+                    }else{
+                        setisAlreadyAvailable(false)
+                    }
+
+                }}>
+                    <Text style={theme.checkoutButtonText}>{
+                    isAlreadyAvailable ? 
+                        Labels.removeCard
+                    :
+                    Labels.addToCard}</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -110,4 +146,5 @@ const styles = StyleSheet.create({
 });
 
 //make this component available to the app
-export default ProductDetails;
+// export default ProductDetails;
+export default connect(mapStateToProps)(ProductDetails)

@@ -6,7 +6,7 @@ import Labels from '../utils/labels';
 import theme from '../utils/theme';
 import { useNavigation } from '@react-navigation/native';
 import ScreenNames from '../utils/constants';
-
+import CommonHeadr from '../components/commonHeader';
 
 const sampleOrderList = [
     {
@@ -186,7 +186,7 @@ const Orders = ({ item, index }) => {
                 <TouchableOpacity style={theme.buttonStyle}>
                     <Text style={theme.buttonTextStyle}>{Labels.cancel}</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={theme.buttonStyle}>
+                <TouchableOpacity style={theme.buttonStyle} onPress={()=>{ navigation.navigate(ScreenNames.OrderStatus)}}>
                     <Text style={theme.buttonTextStyle}>{Labels.track}</Text>
                 </TouchableOpacity>
             </View>
@@ -200,6 +200,7 @@ const Orders = ({ item, index }) => {
 const OrderList = () => {
     return (
         <View style={styles.container}>
+            <CommonHeadr headerName={Labels.yourOrders}/>
             <ScrollView>
                 {
                     sampleOrderList.map((item, index) => {

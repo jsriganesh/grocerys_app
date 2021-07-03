@@ -41,9 +41,9 @@ const Bottomnavigation = (props) => {
             <View>
               <Icon color={props.color} name="shopping-cart" size={25} />
             </View>
-            <View style={{ position: 'absolute', marginLeft: 15 }}>
-              <Badge >55</Badge>
-            </View>
+              <View style={{ position: 'absolute', marginLeft: 15 }}>
+                <Badge>{0}</Badge>
+              </View>
           </View>
         )
       }
@@ -54,7 +54,7 @@ const Bottomnavigation = (props) => {
 
 
 
-  console.log("index" + index)
+  // console.log("index" + index)
 
   const renderScene = BottomNavigation.SceneMap({
     // music: MusicRoute,

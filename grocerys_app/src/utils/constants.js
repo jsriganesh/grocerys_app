@@ -7,6 +7,7 @@ var ScreenNames={
      OrderDetails:"OrderDetails",
      OrderList:"OrderList",
      ProductDetails:"ProductDetails",
+     OrderStatus:"OrderStatus"
 }
 
 
