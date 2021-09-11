@@ -6,7 +6,7 @@ import Labels from '../utils/labels';
 import theme from '../utils/theme';
 import { useNavigation } from '@react-navigation/native';
 import ScreenNames from '../utils/constants';
-import CommonHeadr from '../components/commonHeader';
+import CommonHeader from '../components/commonHeader';
 
 const sampleOrderList = [
     {
@@ -200,7 +200,7 @@ const Orders = ({ item, index }) => {
 const OrderList = () => {
     return (
         <View style={styles.container}>
-            <CommonHeadr headerName={Labels.yourOrders}/>
+            <CommonHeader headerName={Labels.yourOrders}/>
             <ScrollView>
                 {
                     sampleOrderList.map((item, index) => {

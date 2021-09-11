@@ -20,7 +20,8 @@ export default theme = StyleSheet.create({
     // flexDirection:"row",justifyContent:"space-between",backgroundColor:Colors.footerBackground,height:60,alignItems:"center"
   },
   linearGradient: {
-    height: deviceHeight - 60
+    flex:1
+    // height: deviceHeight - 60
   },
 
   searchButtonStyle: {
@@ -90,7 +91,9 @@ export default theme = StyleSheet.create({
     fontSize: 15, fontWeight: "bold", color: colors.themeColor 
   },
   checkOutButtonView:{
-    flexDirection:"row",marginHorizontal:15,justifyContent:"space-between",alignItems:"center"
+    flexDirection:"row",
+    marginHorizontal:15,
+    justifyContent:"space-between",alignItems:"center"
   },
   mediumText:{
     fontSize: 17, fontWeight: "bold", marginVertical: 10
@@ -221,11 +224,12 @@ searchContainer:{
   alignItems:"center"
 },
 searchScreenCloseIcons:{
-  height:40,width:40,
+  height:35,width:35,
   // justifyContent:"center",alignItems:"center",alignContent:"center",alignSelf:"center"
 },
 
 headerStyle:{
+  paddingHorizontal:10,
   alignItems:"center",
   // justifyContent:"space-between",
   flexDirection:"row",
@@ -237,13 +241,16 @@ backArrowStyle:{
   marginRight:10,
   height:25,width:25,tintColor:colors.headerFontColor
 },
+addAddressIcon:{
+  height:20,width:20,tintColor:colors.headerFontColor
+},
 headerNameStyle:{
   fontSize:18,fontWeight:"bold",
   // color:colors.headerFontColor
   color:colors.black
 },
 headerBackNameStyle:{
-  fontSize:18,fontWeight:"bold",
+  fontSize:17,fontWeight:"bold",
   color:colors.headerFontColor
 },
 productDetailsScreen:{
@@ -263,6 +270,39 @@ profileEmail:{
   color:colors.white,fontWeight:"500",fontSize:16
 },
 
-profileIcons:{ height: 30, width: 30, marginRight: 10 }
+profileIcons:{ height: 30, width: 30, marginRight: 10 },
+
+addressEmptyText:{
+  marginVertical:10,
+  fontWeight:"bold",fontSize:18
+},
+addressEmptyNotesText:{
+  fontSize:16,color:"#888888"
+},
+categotyStyle:{
+  marginVertical: 5,
+  shadowRadius: 4,
+  shadowOffset: {
+      width: 4,
+      height: -4,
+  },
+  shadowColor: "#000000",
+  elevation: 4,
+  height:180, 
+  width: (deviceWidth/3)-6,
+  marginHorizontal:3,
+  paddingHorizontal:5,
+
+  paddingVertical:5,
+  backgroundColor:colors.white,
+justifyContent: "center", borderRadius: 5,
+// alignSelf:"center",
+alignItems:"center"
+},
+type:{
+  marginTop:10,
+  marginLeft:10,
+  borderRadius:4, paddingHorizontal:7,paddingVertical:5,borderWidth:1,borderColor:colors.themeColor,width:70,alignItems:"center"
+}
 
 })

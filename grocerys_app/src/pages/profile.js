@@ -6,6 +6,7 @@ import theme from '../utils/theme';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import ScreenNames from '../utils/constants';
 import { useNavigation } from '@react-navigation/native';
+import CommonFooter from "../components/CommonFooter"
 
 // create a component
 
@@ -32,12 +33,13 @@ const Profile = () => {
 
     const options = [
         { label: "My Orders", pageName: ScreenNames.OrderList },
-        { label: "Delivery Address" },
+        { label: "Delivery Address", pageName: ScreenNames.DeliveryAddress},
         { label: "Contact Us" },
         { label: "Feedbacks" }
     ]
     return (
         <View style={styles.container}>
+           <View style={{flex:1}}>
             <ProfileHeader />
 
             {
@@ -50,7 +52,8 @@ const Profile = () => {
                     )
                 })
             }
-
+            </View>
+            <CommonFooter/>
         </View>
     );
 };

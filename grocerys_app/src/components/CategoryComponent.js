@@ -1,6 +1,6 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image, ScrollView,FlatList, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, ScrollView,FlatList, TouchableOpacity,SafeAreaView } from 'react-native';
 import colors from '../utils/colors';
 import theme from '../utils/theme';
 
@@ -19,21 +19,7 @@ const Category = () => {
 
 const BoxCategory = (props) => {
     return (
-        <View style={{ 
-            marginVertical: 5,
-            shadowRadius: 4,
-            shadowOffset: {
-                width: 4,
-                height: -4,
-            },
-            shadowColor: "#000000",
-            elevation: 4,
-            height:180, width: 120,
-            paddingHorizontal:5,
-            paddingVertical:5,
-            backgroundColor:colors.white,
-        justifyContent: "center", borderRadius: 5,
-        }}>
+        <View style={theme.categotyStyle}>
             <TouchableOpacity>
             <View style={theme.boxCategorycontainer}>
                 {/* <Image resizeMode={"cover"} style={theme.boxCategoryImage} source={require("../../assets/images/cat.png")} /> */}
@@ -70,37 +56,72 @@ export const CategoryComponent = () => {
 
 export const CategoryList = (props) => {
     // console.log(props.height)
-    return (
-        <ScrollView horizontal={false} style={{ marginHorizontal:5 ,marginVertical:10,paddingBottom:20 
-        // ,height:props.heights
-        }}>
-            <View style={{flexDirection:"row",flexWrap:"wrap",justifyContent:"space-between"}}>
-            <BoxCategory  image={require('../../assets/images/cat1.jpeg')} />
-            <BoxCategory  image={require('../../assets/images/cat2.png')} />
-            <BoxCategory  image={require('../../assets/images/cat3.png')} />
-            <BoxCategory  image={require('../../assets/images/cat.png')} />
-            <BoxCategory  image={require('../../assets/images/cat1.jpeg')} />
-            <BoxCategory  image={require('../../assets/images/cat2.png')} />
-            <BoxCategory  image={require('../../assets/images/cat3.png')} />
-            <BoxCategory  image={require('../../assets/images/cat.png')} />
-            <BoxCategory  image={require('../../assets/images/cat1.jpeg')} />
-            <BoxCategory  image={require('../../assets/images/cat2.png')} />
-            <BoxCategory  image={require('../../assets/images/cat3.png')} />
-            <BoxCategory  image={require('../../assets/images/cat.png')} />
-            <BoxCategory  image={require('../../assets/images/cat2.png')} />
-            <BoxCategory  image={require('../../assets/images/cat3.png')} />
-            <BoxCategory  image={require('../../assets/images/cat.png')} />
 
-            <BoxCategory  image={require('../../assets/images/cat2.png')} />
-            <BoxCategory  image={require('../../assets/images/cat3.png')} />
-            <BoxCategory  image={require('../../assets/images/cat.png')} />
+    var data = [
+        {image:require('../../assets/images/cat1.jpeg'),name:"test"},
+        {image:require('../../assets/images/cat2.png'),name:"test"},
+        {image:require('../../assets/images/cat3.png'),name:"test"},
+        {image:require('../../assets/images/cat.png'),name:"test"},
+        {image:require('../../assets/images/cat1.jpeg'),name:"test"},
+        {image:require('../../assets/images/cat2.png'),name:"test"},
+        {image:require('../../assets/images/cat3.png'),name:"test"},
+        {image:require('../../assets/images/cat.png'),name:"test"},
+        {image:require('../../assets/images/cat1.jpeg'),name:"test"},
+        {image:require('../../assets/images/cat2.png'),name:"test"},
+        {image:require('../../assets/images/cat3.png'),name:"test"},
+        {image:require('../../assets/images/cat.png'),name:"test"},
+    ]
+    return (
+        // <ScrollView horizontal={false} 
+        // style={{ marginHorizontal:5 ,marginVertical:10,paddingBottom:20  }}
+        // >
+        //     {/* <View style={{flexDirection:"row",flexWrap:"wrap",justifyContent:"center"}}> */}
+        //     {/* <SafeAreaView style={{flex:1}}> */}
+                
+            <FlatList
+            // horizontal={true}
+            // onRefresh={()=>{}}
+            // scrollEnabled={true}
+            refreshing={false}
+            onRefresh={() => {alert("You are trying to refresh the category ")}}
+
+            keyExtractor={(item,index) => index}            
+            numColumns={3}
+            data={data}
+            renderItem={({item,index})=>{
+                return(
+                    <BoxCategory  image={item.image} />
+                )
+            }}
+            />
+
+        //     {/* <BoxCategory  image={require('../../assets/images/cat1.jpeg')} />
+        //     <BoxCategory  image={require('../../assets/images/cat2.png')} />
+        //     <BoxCategory  image={require('../../assets/images/cat3.png')} />
+        //     <BoxCategory  image={require('../../assets/images/cat.png')} />
+        //     <BoxCategory  image={require('../../assets/images/cat1.jpeg')} />
+        //     <BoxCategory  image={require('../../assets/images/cat2.png')} />
+        //     <BoxCategory  image={require('../../assets/images/cat3.png')} />
+        //     <BoxCategory  image={require('../../assets/images/cat.png')} />
+        //     <BoxCategory  image={require('../../assets/images/cat1.jpeg')} />
+        //     <BoxCategory  image={require('../../assets/images/cat2.png')} />
+        //     <BoxCategory  image={require('../../assets/images/cat3.png')} />
+        //     <BoxCategory  image={require('../../assets/images/cat.png')} />
+        //     <BoxCategory  image={require('../../assets/images/cat2.png')} />
+        //     <BoxCategory  image={require('../../assets/images/cat3.png')} />
+        //     <BoxCategory  image={require('../../assets/images/cat.png')} />
+
+        //     <BoxCategory  image={require('../../assets/images/cat2.png')} />
+        //     <BoxCategory  image={require('../../assets/images/cat3.png')} />
+        //     <BoxCategory  image={require('../../assets/images/cat.png')} /> */}
 
 
 
             
-            </View>
+        //     {/* </SafeAreaView> */}
            
-        </ScrollView>
+        // </ScrollView>
+        // </View>
     );
 };
 

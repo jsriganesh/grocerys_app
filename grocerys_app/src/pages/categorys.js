@@ -1,12 +1,13 @@
 //import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import CommonFooter from "../components/CommonFooter"
 
 // create a component
 const Categorys = () => {
     return (
         <View style={styles.container}>
-            <Text>Categorys</Text>
+            <CommonFooter/>
         </View>
     );
 };
@@ -15,8 +16,7 @@ const Categorys = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+       
         backgroundColor: '#2c3e50',
     },
 });

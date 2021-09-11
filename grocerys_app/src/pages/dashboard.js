@@ -6,10 +6,9 @@ import {
   SafeAreaView,
   Dimensions,
   ScrollView,
-
-
 } from 'react-native';
 import Carousel from 'react-native-snap-carousel'; // Version can be specified in package.json
+import CommonFooter from "../components/CommonFooter"
 
 import Bottomnavigation from "../components/BottomNavigation";
 import LinearGradient from 'react-native-linear-gradient';
@@ -69,6 +68,8 @@ const Dashboard = (props) => {
   }
 
   return (
+    <View style={{flex:1}}>
+
     <LinearGradient
       colors={[colors.themeColor, '#FFFFFF']}
       style={theme.linearGradient}
@@ -77,7 +78,9 @@ const Dashboard = (props) => {
         <Text style={styles.appNameStyle}>{Labels.AppName}</Text>
       <SearchButton navigation={props.navigation}/>
       </View>
-      <View  onLayout={(event) => { find_dimesions(event.nativeEvent.layout,"banner") }}>
+      <View  
+      onLayout={(event) => { find_dimesions(event.nativeEvent.layout,"banner") }}
+      >
         <Carousel
           layout={'default'} 
           data={DATA}
@@ -93,10 +96,11 @@ const Dashboard = (props) => {
       </View>
 
       {/* <CategoryComponent/> */}
-      {/* <View style={{height:screenHeight-bannerHeight-headerHeight}}> */}
       <CategoryList height={screenHeight-bannerHeight-headerHeight}/>
-      {/* </View> */}
+
       </LinearGradient>
+            <CommonFooter/>
+</View>
   )
 }
 

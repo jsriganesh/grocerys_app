@@ -31,7 +31,13 @@ const Bottomnavigation = (props) => {
 
     { key: 'dashBoard', title: 'Home', icon: 'home' },
 
-    { key: 'categorys', title: 'Categorys', icon: 'cart' },
+    { key: 'categorys', title: 'Categorys', icon: (props) => {
+      return (
+        <View >
+            <Icon color={props.color} name="th-large" size={25} />
+        </View>
+      )
+    } },
 
     {
       key: 'cart', title: 'Cart', icon: (props) => {
@@ -48,7 +54,13 @@ const Bottomnavigation = (props) => {
         )
       }
     },
-    { key: 'profile', title: 'Profile', icon: 'cart' },
+    { key: 'profile', title: 'Profile', icon:(props) => {
+      return (
+        <View >
+            <Icon color={props.color} name="user" size={25} />
+        </View>
+      )
+    } },
     // { key: 'recents', title: 'Recents', icon: 'cart' },
   ]);
 

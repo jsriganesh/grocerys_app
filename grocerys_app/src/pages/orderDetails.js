@@ -5,7 +5,7 @@ import colors from '../utils/colors';
 import Labels from '../utils/labels';
 import theme from "../utils/theme";
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
-import CommonHeadr from '../components/commonHeader';
+import CommonHeader from '../components/commonHeader';
 
 // create a component
 
@@ -91,7 +91,7 @@ const ProductList = () => {
 const OrderDetails = () => {
     return (
         <View style={styles.container}>
-            <CommonHeadr  headerName={Labels.orderDetails}/>
+            <CommonHeader  headerName={Labels.orderDetails}/>
             <ScrollView style={{marginHorizontal:10}}>
                 <ProductDetails />
                 <ShippingInfo />

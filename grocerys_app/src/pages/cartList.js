@@ -3,7 +3,7 @@ import React, { Component, useState,useEffect } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput, ScrollView } from 'react-native';
 import colors from '../utils/colors';
 import Labels from '../utils/labels';
-import CommonHeadr from "../components/commonHeader";
+import CommonHeader from "../components/commonHeader";
 import LottieView from 'lottie-react-native';
 import { useNavigation,useFocusEffect ,useIsFocused} from '@react-navigation/native';
 
@@ -12,6 +12,7 @@ import ScreenNames from '../utils/constants';
 import { connect } from "react-redux";
 import { ActionTypes } from '../redux/action/actionList';
 // import { useFocusEffect } from '@react-navigation/native';
+import CommonFooter from "../components/CommonFooter"
 
 const mapStateToProps = (state) => ({
     cartList: state.cartListReducer.cartList
@@ -71,6 +72,7 @@ const RenderProductList = (props) => {
                 <Text style={theme.cartItemTotalAmount}>{rupee}{" "}{"200"}</Text>
 
             </View>
+            
         </View>
     )
 }
@@ -100,7 +102,7 @@ const PriceDetails = () => {
 
 const EmptyCart = () => {
     return (
-        <LottieView source={require('../../assets/animation/Animation_Empty_Cart.json')} autoPlay loop={false} />
+        <LottieView  source={require('../../assets/animation/Animation_Empty_Cart.json')} autoPlay={false} loop={false} />
     )
 }
 
@@ -121,6 +123,7 @@ const CartList = (props) => {
     // const cartList = props.cartList;
 
     let [cartList, setCartList] = useState([...props.cartList])
+    // let [cartList, setCartList] = useState(props.cartList)
 
     function removeItem(index){
         var list = props.cartList
@@ -155,14 +158,15 @@ const CartList = (props) => {
 
 
 
-    // useEffect(()=>{
-    //     setCartList(props.cartList)        
-    //     console.log("------------"+props.cartList)
-    // })
+    useEffect(()=>{
+        setCartList(props.cartList)        
+        console.log("------------"+props.cartList)
+    },[])
 
     return (
         <View style={styles.container}>
-            {/* <CommonHeadr title={"CART"}/> */}
+            {/* <CommonHeader title={"CART"}/> */}
+            <View style={{flex:1}}>
             {
                 cartList.length > 0 ?
                     <View>
@@ -178,6 +182,8 @@ const CartList = (props) => {
                     :
                     <EmptyCart />
             }
+            </View>
+            <CommonFooter/>
         </View>
     );
 };

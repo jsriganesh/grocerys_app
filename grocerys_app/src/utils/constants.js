@@ -7,7 +7,11 @@ var ScreenNames={
      OrderDetails:"OrderDetails",
      OrderList:"OrderList",
      ProductDetails:"ProductDetails",
-     OrderStatus:"OrderStatus"
+     OrderStatus:"OrderStatus",
+     DeliveryAddress:"DeliveryAddress",
+     Categorys:"Categorys",
+     Cart:"Cart",
+     Profile:"Profile"
 }
 
 

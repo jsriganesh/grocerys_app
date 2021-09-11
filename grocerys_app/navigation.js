@@ -12,9 +12,14 @@ import BottomNavigation from "./src/components/BottomNavigation"
 import SearchProducts from "./src/pages/searchProducts"
 import SearchButton from "./src/components/searchButton"
 import colors from './src/utils/colors';
+import Categorys from "./src/pages/categorys"
+import Cart from "./src/pages/cartList"
+import Profile from "./src/pages/profile"
+
 
 
 import ProductDetails from "./src/pages/productDetails"
+import DeliveryAddress from "./src/pages/deliveryAddressDetails"
 import OrderStatus from "./src/pages/orderStatus"
 
 // create a component
@@ -34,16 +39,21 @@ const AppNavigator=() =>{
 
          
           
-          <AppStackNavigator.Screen name={ScreenNames.BottomNavigation} component={BottomNavigation} />
-          <AppStackNavigator.Screen name={ScreenNames.SearchProducts} component={SearchProducts} />
+          {/* <AppStackNavigator.Screen name={ScreenNames.BottomNavigation} component={BottomNavigation} /> */}
           {/* <AppStackNavigator.Screen name={ScreenNames.SearchButton} component={SearchButton} /> */}
           <AppStackNavigator.Screen name={ScreenNames.DashBoardPage} component={Dashboard} />
           <AppStackNavigator.Screen name={ScreenNames.CheckoutDetails} component={CheckoutDetails} />
+          <AppStackNavigator.Screen name={ScreenNames.SearchProducts} component={SearchProducts} />
+          <AppStackNavigator.Screen name={ScreenNames.Categorys} component={Categorys} />
+          <AppStackNavigator.Screen name={ScreenNames.Cart} component={Cart} />
+          <AppStackNavigator.Screen name={ScreenNames.Profile} component={Profile} />
+          
 
           <AppStackNavigator.Screen name={ScreenNames.OrderDetails} component={OrderDetails} />
           <AppStackNavigator.Screen name={ScreenNames.OrderList} component={OrderList} />
           <AppStackNavigator.Screen name={ScreenNames.ProductDetails} component={ProductDetails} />
           <AppStackNavigator.Screen name={ScreenNames.OrderStatus} component={OrderStatus} />
+          <AppStackNavigator.Screen name={ScreenNames.DeliveryAddress} component={DeliveryAddress} />
 
 
           

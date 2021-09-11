@@ -35,6 +35,11 @@ var Labels = {
     back:"Back",
     orderDetails:"Order Details",
     orderStatus:"Order Status",
+    SavedAddress:"Saved Address",
+    addNewAddress:"Address",
+    addressEmpty:"Saved Address is Empty",
+    addressEmptyNotes1:"Looks like you haven't saved any",
+    addressEmptyNotes2:"delivery address yet",
 }
 
 export default Labels

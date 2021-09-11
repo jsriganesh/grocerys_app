@@ -6,7 +6,7 @@ import Labels from '../utils/labels';
 import theme from '../utils/theme';
 import { useNavigation } from '@react-navigation/native';
 import ScreenNames from '../utils/constants';
-import CommonHeadr from '../components/commonHeader';
+import CommonHeader from '../components/commonHeader';
 import Timeline from 'react-native-timeline-flatlist'
 
 // create a component
@@ -43,7 +43,7 @@ const OrderStatus = () => {
     ]
     return (
         <View style={styles.container}>
-            <CommonHeadr headerName={Labels.orderStatus} />
+            <CommonHeader headerName={Labels.orderStatus} />
 
             <View style={{marginLeft:40,marginTop:20}}>
                 {
